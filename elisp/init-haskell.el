@@ -28,12 +28,21 @@
     (add-hook 'haskell-mode-hook 'subword-mode)
     (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
     (add-hook 'haskell-cabal-mode 'subword-mode)
-    (setq haskell-process-args-cabal-new-repl
-	        '("--ghc-options=-ferror-spans -fshow-loaded-modules"))
-    (setq haskell-process-type 'cabal-new-repl)
-    (setq haskell-stylish-on-save 't)
-    (setq haskell-tags-on-save 't)
-    ))
+    (setq haskell-process-args-cabal-new-repl '("--ghc-options=-ferror-spans -fshow-loaded-modules"))
+    ;; (setq haskell-process-type 'cabal-repl)
+    ;; (setq haskell-stylish-on-save 't)
+    ;; (setq haskell-tags-on-save 't)
+    )
+  :custom
+  (haskell-stylish-on-save t)
+  (haskell-tags-on-save t)
+  (haskell-process-suggest-remove-import-lines t)
+  (haskell-process-auto-import-loaded-modules t)
+  (haskell-process-log t)
+  (haskell-process-type 'stack-ghci)
+  :bind
+  ((:map haskell-mode-map ("M-." . haskell-mode-jump-to-def-or-tag)))
+  )
 
 (provide 'init-haskell)
 

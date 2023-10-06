@@ -19,9 +19,20 @@
   (doom-themes-visual-bell-config)
   (doom-themes-org-config)
   (doom-themes-neotree-config)
-  (setq doom-themes-treemacs-theme "doom-atom")
+  (setq doom-themes-treemacs-theme "doom-colors")
   (doom-themes-treemacs-config)
   (load-theme 'doom-vibrant t))
+
+(use-package doom-modeline
+  :custom
+  ;; Dom't compact font caches during GC.  Windows Laggy Issue
+  (inhibit-compacting-cont-caches t)
+  (doom-modeline-minor-modes t)
+  (doom-modeline-icon t)
+  (doom-modeline-major-mode-color-icon t)
+  (doom-modeline-height 15)
+  :config
+  (doom-modeline-mode))
 
 (provide 'init-theme)
 

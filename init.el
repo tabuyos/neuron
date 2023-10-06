@@ -36,6 +36,7 @@
 
 (require 'init-haskell)
 
+(require 'init-treemacs)
 (require 'init-eglot)
 
 (require 'init-awesome-pair)
