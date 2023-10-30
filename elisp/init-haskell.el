@@ -33,6 +33,10 @@
     ;; (setq haskell-stylish-on-save 't)
     ;; (setq haskell-tags-on-save 't)
     )
+  :config
+  (add-to-list 'eglot-workspace-configuration
+               '((haskell (plugin (stan (globalOn . :json-false)))))
+               )
   :custom
   (haskell-stylish-on-save t)
   (haskell-tags-on-save t)

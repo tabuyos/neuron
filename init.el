@@ -34,10 +34,12 @@
 (require 'init-theme)
 (require 'init-font)
 
+(require 'init-eglot)
+
 (require 'init-haskell)
+(require 'init-rust)
 
 (require 'init-treemacs)
-(require 'init-eglot)
 
 (require 'init-awesome-pair)
 
